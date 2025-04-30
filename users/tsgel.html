@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>متواضع - الرئيسية</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="#assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="#assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="#assets/favicons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+              <script async src="https://www.googletagmanager.com/gtag/js?id=UA-210850210-1"></script>
+      <script src="script.js" defer></script>
+      <!-- Google Tag Manager -->
+<script src="script.js" defer></script>
+<!-- End Google Tag Manager -->
+
+          </head>
+  <body>
+
+    <section class="header"><div class="container-fluid"><div class="row"><div class="menubutton"><button class="menutoggel"><i class="icon-menu"></i></button></div><div class="col-3 logobox">
+      <div class="logo"><img src="./logo.png"></div></div><div class="col-6 menubox"><div class="dbmenu"><ul class="headermenu"><li>
+        <a href="./account.html"><i class="icon-user"></i><span class="text">حسابي</span></a></li>
+        <li><a href="#notifications"><i class="icon-bell"></i><span class="text">الإشعارات</span>
+          <span class="notifacation_header"></span></a></li></ul></div></div>
+          <div class="col-3 logoutbutton"><div class="logout">
+            <form id="logout" action="#actions" method="post">
+              <input type="hidden" name="logout" value="logout">
+              <button type="submit" name="logoutnow" value="1"> 
+                <i class="icon-logout"></i><span class="text">تسجيل الخروج</span>
+              </button></form></div></div></div></div></section>
+    <div class="mainbox">
+        <div class="sidebar">
+        <ul class="sidebar-menu-rtl">
+            <li>
+                <a href="index.html">
+                <i class="icon-flag-empty">
+                </i>
+       <span>الرئيسية</span>
+    </a>
+</li>
+      
+       <li>
+      <a href="tsgel.html">
+        <i class="icon-box">
+      </i>
+      <span> الإجراءات</span>
+    </a>
+     </li>
+
+       <li>
+      <a href="inquiry.html">
+        <i class="icon-box">
+      </i>
+      <span>  الإسلتعلام عن الإجراءات</span>
+    </a>
+     </li>
+     <li>
+        <a href="sallery.html">
+          <i class="icon-box">
+        </i>
+        <span> الرواتب</span>
+      </a>
+       </li>
+  
+<li><a href="https://www.facebook.com/Metwade3group/?locale=ar_AR" target="_blank">
+  <i class="icon-facebook"></i> جروب  متواضع</a></li></ul>
+  <div class="account_manager_box"><p><span class="hint--left hint–info" data-hint="منشئ الموقع">
+    <i class="icon-lightbulb"></i> منشئ الموقع</span></p><img src="image/eng.jpg"><h3>Eng.Mahmoud Ibrahem</h3><p>
+يوم الجمعه اجازة رسمية</small></p>
+<div class="box_data"><a href="tel:010000723760"><i class="icon-phone"></i> 01000723760</a>
+</div>
+</div>
+<div class="account_manager_box"><p> مدير HR</p><img src="image/hr.jpg">
+  <h3>Mr/Mathew Nader</h3><p></p>
+  <p><small>للتواصل قم بارسال اسم المستخدم عبر واتساب</small></p>
+  <div class="box_data"><a target="_blank" href="https://wa.me/01144555790">
+    <i class="icon-whatsapp"></i> 01144555790</a></div></div></div>
+          <div class="mainbar">
+
+<div class="col-12 payform"><div class="row"><h4>برجاء اختيار الإجراء</h4>
+    <form action="#" method="post">
+        <input type="hidden" name="userID" value="58903">
+        <div class="col-6">
+            <select id="payment_method_type">
+            <option disabled selected>إختر  الإجراء</option>
+              <option value="مامورية حضور متأخر">مامورية حضور متأخر</option>
+            <option value="مأمورية يوم كامل">مأمورية يوم كامل</option>
+            <option value="اذن حضور متأخر">اذن حضور متأخر</option>
+            <option value="مامورية انصراف مبكر">مامورية انصراف مبكر</option>
+            <option value="اذن انصراف مبكر">اذن انصراف مبكر</option>
+            <option value="أجازة عارضة">أجازة عارضة</option>
+            <option value="أجازة مرضى">أجازة مرضى</option>
+            <option value="إذن نسيان بصمه صباحى">إذن نسيان بصمه صباحى</option>
+            <option value="إذن نسيان بصمه مسائى">إذن نسيان بصمه مسائى</option>
+
+        </select></div>
+    <div class="col-6" id="inputContainer">
+        <label id="infolabel" for="payment_info">عدد الساعات</label>
+        <input type="text" id="payment_info" name="payment_info" placeholder="">
+    </div>
+        <div class="col-6" id="inputContainer2">
+            <label id="infolabel2" for="payment_info2">سبب المأموريه </label>
+            <input type="text" id="payment_info2" name="payment_info2" placeholder="">
+        </div>
+        <div class="col-6" id="inputContainer3">
+            <label id="infolabel2" for="payment_info2">سبب الاذن </label>
+            <input type="text" id="payment_info3" name="payment_info3" placeholder="">
+        </div>
+        <div class="col-6">
+            <label>التاريخ</label>
+            <input type="date" name="name" value="">
+        </div>
+            <div class="col-9"></div>
+            <div class="col-3">
+                <input type="submit" class="submit" value="حفظ" name=""></div>
+            </form>
+            <script src="script.js" defer></script></div></div>
+          </div>
+          <script>
+            const selectElement = document.getElementById('payment_method_type');
+const inputLabel = document.getElementById('infolabel');
+const inputLabel2 = document.getElementById('infolabel2');
+const inputField = document.getElementById('payment_info');
+const inputContainer = document.getElementById('inputContainer'); // الـ div اللي بيغلف الـ input والـ label
+const inputContainer2 = document.getElementById('inputContainer2'); // الـ div اللي بيغلف الـ input والـ label
+const inputContainer3 = document.getElementById('inputContainer3'); // الـ div اللي بيغلف الـ input والـ label
+
+selectElement.addEventListener('change', function() {
+    const selectedOption = selectElement.value;
+
+    // هنا بقى هنبدأ نغير الـ label والـ input بناءً على الـ option اللي اتختارت
+    if ( selectedOption === 'اذن حضور متأخر'  || selectedOption === 'اذن انصراف مبكر') {
+        inputLabel.textContent = 'عدد الساعات';
+        inputField.type = 'number'; // ممكن نغير الـ type بتاع الـ input
+        inputContainer.style.display = 'block'; // نتأكد إن الـ input ظاهر
+        inputContainer3.style.display = 'block'; // نتأكد إن الـ input ظاهر
+        inputContainer2.style.display = 'none'; // نتأكد إن الـ input مخفى
+    } else if (selectedOption === 'أجازة عارضة' || selectedOption === 'أجازة مرضى') {
+        inputLabel.textContent = 'سبب الإجازة';
+        inputField.type = 'text';
+        inputContainer.style.display = 'block';
+        inputContainer2.style.display = 'none'; // نتأكد إن الـ input مخفى
+        inputContainer3.style.display = 'none'; // نتأكد إن الـ input مخفى
+
+    } else if (selectedOption === 'مأمورية يوم كامل' || selectedOption === 'مامورية حضور متأخر' || selectedOption === 'مامورية انصراف مبكر') {
+        inputLabel.textContent = 'عدد الساعات';
+        inputLabel2.textContent =  'سبب المأموريه';
+
+        inputField.type = 'number'; // ممكن نغير الـ type بتاع الـ input
+        inputContainer.style.display = 'block'; // نتأكد إن الـ input ظاهر
+        inputContainer2.style.display = 'block'; // نتأكد إن الـ input ظاهر
+        inputContainer3.style.display = 'none'; // نتأكد إن الـ input ظاهر
+
+    } else if (selectedOption === 'أجازة عارضة' || selectedOption === 'أجازة مرضى') {
+        inputLabel.textContent = 'سبب الإجازة';
+        inputField.type = 'text';
+        inputContainer.style.display = 'block';
+    
+    } else if (selectedOption === 'مأمورية يوم كامل' || selectedOption === 'إذن نسيان بصمه صباحى' || selectedOption === 'إذن نسيان بصمه مسائى') {
+        inputContainer.style.display = 'none'; // نخفي الـ input خالص لو مش عايزينه
+    } else {
+        inputLabel.textContent = 'معلومات إضافية'; // قيمة افتراضية
+        inputField.type = 'text';
+        inputContainer.style.display = 'block';
+    }
+});
+
+// كود إضافي (اختياري): لتشغيل التغيير أول مرة عند تحميل الصفحة
+// عشان لو المستخدم جه من صفحة تانية والـ select كان فيه قيمة مختارة بالفعل
+selectElement.dispatchEvent(new Event('change'));
+          </script>

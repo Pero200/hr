@@ -1,0 +1,244 @@
+    <!DOCTYPE html>
+    <html lang="ar" dir="rtl">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>تسجيل الدخول - متواضع جروب🏢</title>
+   
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="style.css">
+
+                  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-210850210-1"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-210850210-1');
+          </script>
+          <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PKQG5HZD');</script>
+<!-- End Google Tag Manager -->
+
+              </head>
+      <body>
+
+
+
+      <div class="loginpage">
+        <div class="header">
+          <div class="loginlogo">
+            <img src="users/logo.png"></div>
+        </div>
+
+        <div class="loginbody">
+          <div class="loginboxbg3" id="thebox">
+
+            <div id="intro" class="active">
+              <h2>مَرحباً بك في متواضع جروب🏢</h2>
+              <div class="area"></div>
+              <div class="row">
+                  <button class="blogin" id="b1" onclick="activebox(1)" type="button">تسجيل دخول</button>
+              </div>
+            </div>
+
+            <div class="logibox" id="login">
+                            <div id=scclogin class="successbx"></div>
+              <div id=errlogin class="errorbx"></div>
+              <form id="loginc" action="users/index.html"  name="loginform" method="get"><div class="field">
+      <label>
+        <i class="icon-user">
+        </i> الإيميل</label>
+        <input type="text" name="username" autocomplete="1" placeholder=" البريد الالكتروني" required></div>
+        <div class="field">
+      <label><i class="icon-key"></i> الباسورد </label>
+      <input type="password" name="password" autocomplete="1" placeholder="كلمة المرور" required></div>
+      <input type="hidden" name="token" value=""><input type="hidden" name="name">
+      <div class="field">
+        <input type="button" value="تسجيل الدخول" id="loginBtn" onclick="window.location.href='users/index.html';">
+        
+<style>
+  form#loginc input[type="button"]
+  {
+
+    margin: 20px 0 0;
+  padding:
+0;
+  height: 40px;
+  width: 300px;
+  line-height: 40px;
+  background:
+linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(251,75,2,1) 100%);
+  border:
+0;
+  border-radius:
+50px;
+  text-align: center;
+  color: #fff;
+  }
+ 
+</style>
+</div>
+    </form>
+      <a>نسيت الباسورد ؟! جدع😂 </a> 
+        <p class="mark">HR System Make By: Mahmoud Ibrahem © 2025</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <script>
+      function activebox(x){
+        var login = document.querySelector("#login");
+        var register = document.querySelector("#register");
+        var intro = document.querySelector("#intro");
+        var thebox = document.querySelector("#thebox");
+        if( x == 1 ){
+          login.classList.add("active");
+          register.classList.remove("active");
+          intro.classList.remove("active");
+          thebox.className = 'loginboxbg1';
+        }
+       
+      }
+      // loginc
+      var loginc = document.querySelector("#loginc");
+      loginc.addEventListener("submit", function(event){
+        event.preventDefault();
+        var scclogin = document.querySelector("#scclogin");
+        var errlogin = document.querySelector("#errlogin");
+        scclogin.classList.remove("active");
+        errlogin.classList.remove("active");
+        var username = event.target.elements.username.value;
+        var password = event.target.elements.password.value;
+        var token = event.target.elements.token.value;
+        var name = event.target.elements.name.value;
+        const url = '#';
+        var params = {'username':username,'password':password,'token':token,'loginform':'loginform','name':name};
+        const form = new FormData();
+        for (const [key, value] of Object.entries(params)) {
+          form.append(key,value);
+        }
+        var data = new URLSearchParams(form);
+        fetch(url, {
+          method: 'POST',
+          body: data
+        })
+        .then(response => response.json())
+        .then(response => {
+          if( response.code == 0 ){
+            errlogin.classList.add("active");
+            errlogin.innerHTML = response.message;
+          }
+          if( response.code == 1 ){
+            scclogin.classList.add("active");
+            scclogin.innerHTML = response.message;
+          }
+          if( response.redirect == 1 ){
+            setTimeout(function(){window.location.href = 'users/index.html'; ;}, 500);
+          }
+        })
+        .catch(err => console.log(err));
+        return 0;
+      });
+      // registerc
+      var registerc = document.querySelector("#registerc");
+      registerc.addEventListener("submit", function(event){
+        event.preventDefault();
+        var sccsingup = document.querySelector("#sccsingup");
+        var errsingup = document.querySelector("#errsingup");
+        sccsingup.classList.remove("active");
+        errsingup.classList.remove("active");
+        var type = event.target.elements.type.value;
+        var mobile = event.target.elements.mobile.value;
+        var email = event.target.elements.email.value;
+        var password = event.target.elements.password.value;
+        var token = event.target.elements.token.value;
+        var name = event.target.elements.name.value;
+        const url = '#';
+        var params = {'singupform':'singupform','type':type,'mobile':mobile,'email':email,'password':password,'token':token,'name':name};
+        const form = new FormData();
+        for (const [key, value] of Object.entries(params)) {form.append(key,value);}
+        var data = new URLSearchParams(form);
+        fetch(url, {method: 'POST',body: data})
+        .then(response => response.json())
+        .then(response => {
+          if( response.code == 0 ){
+            errsingup.classList.add("active");
+            errsingup.innerHTML = response.message;
+          }
+          if( response.code == 1 ){
+            sccsingup.classList.add("active");
+            sccsingup.innerHTML = response.message;
+          }
+          if( response.redirect == 1 ){
+            setTimeout(function(){window.location.href = '#';}, 500);
+          }
+        })
+        .catch(err => console.log(err));
+        return 0;
+      });
+      </script>
+
+
+            
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKQG5HZD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<script>
+  const loginBtn = document.getElementById('loginBtn');
+  const form = document.forms['loginform'];
+  const usernameInput = form.elements['username'];
+  const passwordInput = form.elements['password'];
+
+  let isLocked = false;
+
+  function moveButton() {
+    if (!isLocked && (usernameInput.value.trim() === '' || passwordInput.value.trim() === '')) {
+      const btnWidth = loginBtn.offsetWidth;
+      const btnHeight = loginBtn.offsetHeight;
+      const margin = 20;
+
+      const maxX = window.innerWidth - btnWidth - margin;
+      const maxY = window.innerHeight - btnHeight - margin;
+
+      const x = Math.random() * maxX;
+      const y = Math.random() * maxY;
+
+      loginBtn.style.position = 'fixed';
+      loginBtn.style.left = `${x}px`;
+      loginBtn.style.top = `${y}px`;
+      loginBtn.style.transition = 'left 0.2s, top 0.2s';
+    }
+  }
+
+  function checkInputs() {
+    if (usernameInput.value.trim() !== '' && passwordInput.value.trim() !== '') {
+      isLocked = true;
+      loginBtn.style.position = 'static';
+    }
+  }
+
+  // استجابة للحركة على الكمبيوتر (ماوس)
+  loginBtn.addEventListener('mouseover', moveButton);
+
+  // استجابة للحركة على الموبايل (لمس)
+  loginBtn.addEventListener('touchstart', moveButton);
+
+  // عند الكتابة
+  usernameInput.addEventListener('input', checkInputs);
+  passwordInput.addEventListener('input', checkInputs);
+</script>
+
+         
+      </body>
+    </html>
+    
